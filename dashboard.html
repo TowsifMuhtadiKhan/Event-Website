@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Report</title>
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Eone Technologies</span>
+                    </a>
+                </li>  
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li> 
+                <li>
+                    <a href="#hourwisereport">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="title">Hour Wise Report</span>
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Summary</span>
+                    </a>
+                </li> 
+
+            </ul>
+        </div>
+
+        <!--main-->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="grid-outline"></ion-icon>
+                </div>
+                <!--search-->
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search Here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <!--user image-->
+                <div class="user">
+                    <img src="user.jpeg">
+                </div>
+            </div>
+            <!--cards--> 
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="number">601</div>
+                        <div class="cardname">Total Guest</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">71</div>
+                        <div class="cardname">Registered</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">533</div>
+                        <div class="cardname">Not Registered</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">277</div>
+                        <div class="cardname">Male</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="man-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">324</div>
+                        <div class="cardname">Female</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="woman-outline"></ion-icon>
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <div>
+                        <div class="number">276</div>
+                        <div class="cardname">Female</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="woman-outline"></ion-icon>
+                    </div>
+                </div> -->
+            </div>
+             <!--Add Charts-->
+             <div class="graphBox">  
+                <div class="box">
+                    <h3 class="textmod">Over All Summary</h3>
+                        <br> 
+                            <canvas id="myChart2"></canvas>
+                </div>
+                <div class="box"> 
+                    <h3 class="textmod">Age Group Summary</h3>
+                    <br>  <canvas id="myChart1"></canvas>
+                    
+                </div>
+             </div>
+             <!--Hour wise reoport(In Cam)-->
+             
+             <div id="hourwisereport">  
+                <div class="hour_wise_header"><h3>Hour Wise Report</h3></div>
+                <div class="cardBox">
+                    <div class="card">
+                        <div>
+                            <div class="number1">24 March, 2023</div>
+                            <div class="cardname">Date</div>
+                        </div>
+                        <div class="iconBox">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="number1">4:00 - 11:00 PM</div>
+                            <div class="cardname">Time Duration</div>
+                            
+                        </div>
+                        <div class="iconBox">
+                            <ion-icon name="timer-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="number1">In Camera</div>
+                            <div class="cardname">Camera Type</div>
+                        </div>
+                        <div class="iconBox">
+                            <ion-icon name="videocam-outline"></ion-icon>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="graphBox">
+                    <div class="box">
+                        <h3 class="textmod">Gender Report</h3> <br>                    
+                            <select id="hour_select">
+                                <option value="1">4:00 - 5:00 PM</option>
+                                <option value="2">5:00 - 6:00 PM</option>
+                                <option value="3">6:00 - 7:00 PM</option>
+                                <option value="4">7:00 - 8:00 PM</option>
+                                <option value="5">8:00 - 9:00 PM</option>
+                                <option value="6">9:00 - 10:00 PM</option>
+                                <option value="7">10:00 - 11:00 PM</option>
+                            </select>
+                                <br><br><canvas id="myChart3"></canvas>                        
+                    </div>                   
+                    <div class="box"> 
+                        <h3 class="textmod">Age Group Report</h3><br>                        
+                            <select id="hourSelect">
+                                <option value="hour1">4:00 - 5:00 PM</option>
+                                <option value="hour2">5:00 - 6:00 PM</option>
+                                <option value="hour3">6:00 - 7:00 PM</option>
+                                <option value="hour4">7:00 - 8:00 PM</option>
+                                <option value="hour5">8:00 - 9:00 PM</option>
+                                <option value="hour6">9:00 - 10:00 PM</option>
+                                <option value="hour7">10:00 - 11:00 PM</option>                           
+                            </select>
+                                <br><br> <canvas id="myChart4"></canvas>                       
+                    </div>
+                </div>
+                <!--! Outcam-->
+                <div class="cardBox">
+                    <div class="card">
+                        <div>
+                            <div class="number1">24 March, 2023</div>
+                            <div class="cardname">Date</div>
+                        </div>
+                        <div class="iconBox">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="number1">4:00 - 11:00 PM</div>
+                            <div class="cardname">Time Duration</div>
+                            
+                        </div>
+                        <div class="iconBox">
+                            <ion-icon name="timer-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="number1">Out Camera</div>
+                            <div class="cardname">Camera Type</div>
+                        </div>
+                        <div class="iconBox">
+                            <ion-icon name="videocam-outline"></ion-icon>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="graphBox">
+                    <div class="box">
+                        <h3 class="textmod">Gender Report</h3> <br>                    
+                            <select id="hour-select4">
+                                <option value="1">4:00 - 5:00 PM</option>
+                                <option value="2">5:00 - 6:00 PM</option>
+                                <option value="3">6:00 - 7:00 PM</option>
+                                <option value="4">7:00 - 8:00 PM</option>
+                                <option value="5">8:00 - 9:00 PM</option>
+                                <option value="6">9:00 - 10:00 PM</option>
+                                <option value="7">10:00 - 11:00 PM</option>
+                            </select>
+                                <br><br><canvas id="myChart5"></canvas>                        
+                    </div>                   
+                    <div class="box"> 
+                        <h3 class="textmod">Age Group Report</h3><br>                        
+                            <select id="hourSelect5">
+                                <option value="hour1">4:00 - 5:00 PM</option>
+                                <option value="hour2">5:00 - 6:00 PM</option>
+                                <option value="hour3">6:00 - 7:00 PM</option>
+                                <option value="hour4">7:00 - 8:00 PM</option>
+                                <option value="hour5">8:00 - 9:00 PM</option>
+                                <option value="hour6">9:00 - 10:00 PM</option>
+                                <option value="hour7">10:00 - 11:00 PM</option>                           
+                            </select>
+                                <br><br> <canvas id="myChart6"></canvas>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="my_chart.js"></script>
+
+    <!--Code for Script-->
+    <script>
+            //Menu Toggle
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+
+            toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+            }
+            //add hovered class in selected list item
+            let list = document.querySelectorAll('.navigation li');
+            function activelink(){
+            list.forEach((item)=>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered');
+            }
+            list.forEach((item)=>
+            item.addEventListener('mouseover', activelink))                 
+   </script>    
+</body>
+</html>
